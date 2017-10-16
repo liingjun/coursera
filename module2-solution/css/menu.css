@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+}
+div {
+  float: left;
+  width: 30%;
+  border: 3px solid #111111;
+  margin: 12px;
+  padding: 0px;
+  background-color: rgb(200,200,200);
+}
+
+
+h2 {
+  position: relative;
+  left: 70%;
+  top: 0%;
+  text-align: center;
+  background: blue;
+  width: 30%;
+}
+
+.pink {
+  background-color: #FF69B4;
+}
+
+.red {
+  background-color: #FF4500;
+}
+
+.yellow {
+  background-color: #FFFF00
+}
