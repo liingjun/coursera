@@ -1,0 +1,35 @@
+/*
+  body:
+    set background to black;
+  page:
+    set background to deep color;
+    set to center;
+    set max width to 550 px
+  h1:
+    set to center;
+
+*/
+
+body {
+  background-color: black;
+}
+
+#list-page {
+  background-color: #403c3b;
+  text-align: center;
+  max-width: 500;
+/* set to the center */
+  margin: auto;
+  position: relative;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+ul {
+  color: white;
+  text-align: left;
+}
+
