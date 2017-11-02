@@ -36,3 +36,80 @@ ul {
 .complete {
   
 }
+
+ul {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #ec8b68;
+  color: #fff;
+  border-top: 1px solid #fe9772;
+  border-bottom: 1px solid #9f593f;
+  font-size: 24px;
+  letter-spacing: .05em;
+  list-style-type: none;
+  text-align: left;
+  text-shadow: 2px 2px 1px #9f593f;
+  height: 50px;
+  padding-left: 1em;
+  padding-top: 10px;
+}
+
+form {
+  padding: 20px;
+}
+
+input[type='text'] {
+  background-color: #999;
+  color: #333;
+  font-size: 24px;
+  width: 96%;
+  padding: 4px 6px;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+input[type='submit'], button {
+  background-color: #cb6868;
+  color:#f3dad1;
+  border-radius: 8px;
+  border: 0;
+  padding: 8px 10px;
+  margin-top: 10px;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+input[type='submit'], button {
+  margin-top: 0;
+  float: right;
+}
+
+.complete {
+  background-color: #999;
+  color: #fff;
+  background-position: right, center;
+  background-repeat: no-repeat;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #b0b0b0;
+  text-shadow: 2px 2px 1px #333;
+  text-decoration: line-through;
+}
+
+#newItemButton {
+  padding: 20 20 60 20;
+}
+/* set it in the middle. */
+#itemDescription {
+  width: 360px;
+}
+
+
+
+
+

@@ -14,6 +14,7 @@ $(function() {
   // Hide the form of add item.
   var newItemForm = $('#newItemForm');
   newItemForm.hide();
+
   // Show the button of NEW ITEM
   var newItemButton = $('#newItemButton');
   newItemButton.show();
@@ -34,7 +35,7 @@ $(function() {
     // Empty the input form.
     inputText = inputText.val('');
     // Store to the local storage.
-    storeToLocal(list);
+    updateListToLocal(list);
   })
 
   // Click every list item to mark done of it.
@@ -44,12 +45,15 @@ $(function() {
     if (complete === true) {
       // TODO. animate complete.
       li.remove();
+      // complete item should be removed from the list.
+      updateListToLocal(list);
     } else {
       var text = li.text();
       li.remove();
       list.append('<li class=\"complete\">' + text
                   + '</li>')
           .hide().fadeIn(100);
+      updateListToLocal(list);
     }
   })
   // Click again to remove from the list.
@@ -66,7 +70,7 @@ function escapeInput(inputText) {
   return temp.innerHTML;
 }
 
-function storeToLocal(list) {
+function updateListToLocal(list) {
   localStorage.setItem('list', list.html());
 }
 
