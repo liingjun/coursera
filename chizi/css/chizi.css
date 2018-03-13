@@ -1,0 +1,58 @@
+
+
+#meter {
+  color: black;
+}
+
+
+#line {
+  width: 1000px;
+  height: 1px;
+  border-bottom: 1px solid black;
+}
+
+#shuxian {
+  width: 49px;
+  height: 20px;
+  border-left: 1px solid black;
+  float:left;
+  background: #87CEFA;
+}
+
+#mm {
+  width: 4px;
+  height: 10px;
+  border-left: 1px solid black;
+  float: left;
+  /*background: #87CEFA;*/
+}
+
+#mid-cm {
+  width: 4px;
+  height: 15px;
+  border-left: 1px solid black;
+  float: left;
+  /*background: #87CEFA;*/
+}
+
+#cm {
+  width: 4px;
+  height: 20px;
+  border-left: 1px solid black;
+  float: left;
+/*  background: #87CEFA;*/
+}
+
+#placeholder {
+  clear: both;
+  width: 1000px;
+  height: 1px;
+  border-bottom: 1px solid white;
+}
+
+#num {
+  width: 50px;
+  height: 20px;
+  float: left;
+  text-align: center;
+}
