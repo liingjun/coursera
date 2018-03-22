@@ -1,25 +1,18 @@
 
 
-#meter {
+.meter {
   color: black;
 }
 
 
-#line {
-  width: 1000px;
-  height: 1px;
-  border-bottom: 1px solid black;
+.line {
+  width: 167px;
+  height: 167px;
+  background-color: blue;
+  /*border-bottom: 1px solid black;*/
 }
 
-#shuxian {
-  width: 49px;
-  height: 20px;
-  border-left: 1px solid black;
-  float:left;
-  background: #87CEFA;
-}
-
-#mm {
+.mm {
   width: 4px;
   height: 10px;
   border-left: 1px solid black;
@@ -27,30 +20,30 @@
   /*background: #87CEFA;*/
 }
 
-#mid-cm {
+.mid-cm {
   width: 4px;
-  height: 15px;
+  height: 20px;
   border-left: 1px solid black;
   float: left;
   /*background: #87CEFA;*/
 }
 
-#cm {
+.cm {
   width: 4px;
-  height: 20px;
+  height: 40px;
   border-left: 1px solid black;
   float: left;
 /*  background: #87CEFA;*/
 }
 
-#placeholder {
+.placeholder {
   clear: both;
   width: 1000px;
   height: 1px;
   border-bottom: 1px solid white;
 }
 
-#num {
+.num {
   width: 50px;
   height: 20px;
   float: left;
