@@ -5,6 +5,10 @@ var widthCM = screen.width * CMPerPix;
 //alert(widthCM);
 console.log(widthCM)
 
+// Macbook pro retina
+// 13.3" inch 2560 x 1600
+// so 223.17 PPI
+// 
 
 // macbook air:
 // 13.3" 1440*900
@@ -16,12 +20,17 @@ console.log(widthCM)
 // iphone 6:
 // 4.7" 1334x750
 // 326ppi
+// For iphone it is different.
 // 1inch = 325.6 pixels
 // 1mm = how many pixels? 1/10 * 0.393701 * 325.6
 // = 12.8 pixels 
 // 12.8 / 2 = 6.4
 // 1cm = 128 pixels. / 0.8 (经验) = 160pixels
 // 128 * 1.307 = 167
+
+
+
+
 
 // var cm = $('.mm').css({'width':'12px'})
 // var cm = $('.mid-cm').css({'width':'12px'})
@@ -30,8 +39,11 @@ console.log(widthCM)
 
 var value = window.devicePixelRatio;
 
-alert($(window).width()) // 980
-alert($(window).height()) // 1445
+var al = window.navigator.userAgent.toLowerCase();
+alert(al)
+
+// alert($(window).width()) // 980
+// alert($(window).height()) // 1445
 
 // alert(window.screen.width) //375 = 750
 // alert(window.screen.height) // 667 = 1334
