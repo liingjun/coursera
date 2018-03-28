@@ -1,0 +1,42 @@
+
+
+.iphone6Ruler_line {
+	width: 325px;
+	border-bottom: 1px solid black;
+}
+
+
+.iphone6Ruler_mm {
+  width: 6px;
+  height: 10px;
+  border-left: 0.5px solid black;
+  float: left;
+}
+
+.iphone6Ruler_mid_cm {
+  width: 6px;
+  height: 20px;
+  border-left: 0.5px solid black;
+  float: left;
+}
+
+.iphone6Ruler_cm {
+  width: 6px;
+  height: 40px;
+  border-left: 0.5px solid black;
+  float: left;
+}
+
+.place_holder {
+  clear: both;
+  width: 1000px;
+  height: 1px;
+  border-bottom: 1px solid white;
+}
+
+.iphone6Ruler_num {
+  width: 65px;
+  height: 20px;
+  float: left;
+  text-align: center;
+}
