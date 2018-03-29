@@ -6,7 +6,10 @@ var IPHONE_6 = "iphone_6";
 var deviceFunction = {
 	"2560x1600": macPro,
 	"750x1334": iphone6Ruler,
-
+	"640x960": ruler4,
+	"640x1136": ruler5,
+	"1242x2208": ruler6p,
+	"1125x2436": rulerx,
 }
 
 deviceCall()
@@ -16,7 +19,12 @@ function deviceCall() {
 	var width = ratio * window.screen.width;
 	var height = ratio * window.screen.height;
 	var resolutionRatio = width + 'x' + height;
-	deviceFunction[resolutionRatio]();
+	var deviceFunc = deviceFunction[resolutionRatio];
+	if (deviceFunc === undefined) {
+		rulerPPC(64);
+	} else {
+		deviceFunc();
+	}
 	// alert(resolutionRatio);
 	// alert(deviceFunction[resolutionRatio])
 }
@@ -93,7 +101,6 @@ function rulerPPC(ppc) {
 	var c = document.createDocumentFragment();
 	var d = document.createDocumentFragment();
 	for (let i=0; i<line_size_in_cm; i++) {
-		console.log(i)
 		let cm = document.createElement("div");
 		cm.className = "cm";
 		c.appendChild(cm);
@@ -143,6 +150,23 @@ function macPro() {
 function iphone6Ruler() {
 	rulerPPC(64.0969061463419);
 }
+
+function ruler4(argument) {
+	rulerPPC(64.8918114819166)
+}
+
+function ruler5(argument) {
+	rulerPPC(64.1671897067066)
+}
+
+function ruler6p(argument) {
+	rulerPPC(60.4472260938832)
+}
+
+function rulerx(argument) {
+	rulerPPC(60.7120459751023)
+}
+
 
 // OLD CODE
 // function iphone6Ruler(argument) {
