@@ -33,6 +33,15 @@ function appendCSSToHead(cssrule) {
 	$("<style type='text/css'> " + cssrule + "</style>").appendTo("head");
 }
 
+function setWrapperStyle(line_width) {
+	var rule1 = "width: " + line_width + "px;";
+	// height is 2 * max(cm's height)
+	var rule2 = "height: 80px";
+	var rule3 = "overflow-x: scroll;white-space: nowrap;";
+	var cssrule = "#wrapper {" + rule1 + rule2 + rule3 + "}";
+	appendCSSToHead(cssrule);
+}
+
 function getLineStyle(line_width) {
 	var rule1 = "width: " + line_width + "px;";
 	var rule2 = "border-bottom: 1px solid black;";
@@ -85,7 +94,8 @@ function getRulerNumStyle(ppc) {
 function rulerPPC(ppc) {
 	var width = window.screen.width;
 	var height = window.screen.height;
-	var line_size_in_cm = Math.floor(width/ppc);
+	var line_size_in_cm = Math.floor(Math.max(width, height)/ppc);
+	line_size_in_cm = line_size_in_cm * 2;
 	line_width = ppc * line_size_in_cm;
 
 	// see https://stackoverflow.com/questions/1212500/create-a-css-rule-class-with-jquery-at-runtime
@@ -96,7 +106,11 @@ function rulerPPC(ppc) {
 	placeHolderStyle = getPlaceHolderStyle(ppc);
 	rulerNumStyle = getRulerNumStyle(ppc);
 
-	$('body').append("<div class = 'line'></div>");
+	setWrapperStyle(line_width);
+
+	$('body').append("<div id='wrapper'> </div>")
+	var wrapper = $('#wrapper');
+	wrapper.append("<div class = 'line'></div>");
 
 	var c = document.createDocumentFragment();
 	var d = document.createDocumentFragment();
@@ -134,9 +148,12 @@ function rulerPPC(ppc) {
 	let place_holder = document.createElement("div");
 	place_holder.className = "place_holder";
 
-	document.body.appendChild(c);
-	document.body.appendChild(place_holder);
-	document.body.appendChild(d);
+	wrapper.append(c);
+	wrapper.append(place_holder);
+	wrapper.append(d);
+	// document.body.appendChild(c);
+	// document.body.appendChild(place_holder);
+	// document.body.appendChild(d);
 }
 
 function rulerCommon(size, width, height) {
