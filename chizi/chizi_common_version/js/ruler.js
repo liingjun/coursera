@@ -2,7 +2,7 @@
 // Get device info.
 // Only support iphones.
 var cm_common_rule = "border-left: 0.5px solid black;float: left;";
-var IPHONE_6 = "iphone_6";
+var device;
 var deviceFunction = {
 	"2560x1600": macPro,
 	"750x1334": iphone6Ruler,
@@ -108,7 +108,11 @@ function rulerPPC(ppc) {
 
 	setWrapperStyle(line_width);
 
-	$('body').append("<div id='wrapper'> </div>")
+	if (device !== undefined) {
+		$('body').append("<div>" + device + "</div>");
+	}
+
+	$('body').append("<div id='wrapper'> </div>");
 	var wrapper = $('#wrapper');
 	wrapper.append("<div class = 'line'></div>");
 
@@ -161,26 +165,32 @@ function rulerCommon(size, width, height) {
 }
 
 function macPro() {
+	device = "mac pro"
 	rulerPPC(44.6816938348546);
 }
 
 function iphone6Ruler() {
+	device = "iphone6/7/8"
 	rulerPPC(64.0969061463419);
 }
 
 function ruler4(argument) {
+	device = "iphone4"
 	rulerPPC(64.8918114819166)
 }
 
 function ruler5(argument) {
+	device = "iphone6"
 	rulerPPC(64.1671897067066)
 }
 
 function ruler6p(argument) {
+	device = "iphone6/7/8p"
 	rulerPPC(60.4472260938832)
 }
 
 function rulerx(argument) {
+	device = "iphone x"
 	rulerPPC(60.7120459751023)
 }
 
