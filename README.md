@@ -1,6 +1,5 @@
 ## Publish site
-[coursera](https://playtodeath.github.io/coursera/)
-https://playtodeath.github.io/coursera/
+https://liingjun.github.io/coursera/
 
 ## Welcome to GitHub Pages
 
